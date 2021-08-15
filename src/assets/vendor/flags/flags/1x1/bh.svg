@@ -1,0 +1,11 @@
+<svg id="flag-icon-css-bh" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs448">
+    <clipPath id="bh-a">
+      <path d="M0 0h640v480H0z" fill-opacity=".7" id="path445"/>
+    </clipPath>
+  </defs>
+  <path d="M0 0h512v512H0" fill="#fff" id="path1077" opacity="1" stop-opacity="1" stroke-width="4.4"/>
+  <path
+    d="M512 0H102.4l83.4 51.2-83.4 51.2 83.4 51.2-83.4 51.2 83.4 51.2-83.4 51.2 83.4 51.2-83.4 51.2 83.4 51.2-83.4 51.2H512"
+    fill="#ce1126" id="path1079" opacity="1" stop-opacity="1" stroke-width="4.5"/>
+</svg>

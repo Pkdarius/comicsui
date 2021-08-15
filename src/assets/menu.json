@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Administrator",
+    "items": [
+      {
+        "title": "Authorization",
+        "icon": "manage_accounts",
+        "items": [
+          {
+            "title": "Email",
+            "items": [
+              {
+                "title": "Inbox",
+                "href": "inbox.html"
+              },
+              {
+                "title": "Contacts",
+                "href": "contact-list.html"
+              },
+              {
+                "title": "Compose",
+                "href": "compose-mail.html"
+              }
+            ]
+          },
+          {
+            "title": "File Manager",
+            "items": [
+              {
+                "title": "Dashboard",
+                "href": "file-manager.html"
+              },
+              {
+                "title": "Folder",
+                "href": "folder.html"
+              },
+              {
+                "title": "Empty Page",
+                "href": "empty-page.html"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
