@@ -1,0 +1,4 @@
+<h6 class="subtitle fs11">{{ data?.title }}</h6>
+<ul class="nav flex-column">
+  <app-menu-item *ngFor="let item of data?.items" [data]='item'></app-menu-item>
+</ul>

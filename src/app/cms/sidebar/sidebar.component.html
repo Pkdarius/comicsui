@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <!-- Logo sidebar -->
+  <a class="logo" href="">
+    <div class="logo-text">
+      <h5 class="fs22 mb-0">
+        Comimcs.IO <sup class="badge badge-danger">Super Admin</sup>
+      </h5>
+      <p class="text-uppercase fs11">Comics.io</p>
+    </div>
+  </a>
+  <app-sidebar-zone *ngFor="let item of menuItems" [data]="item"></app-sidebar-zone>
+  <br/>
+</div>

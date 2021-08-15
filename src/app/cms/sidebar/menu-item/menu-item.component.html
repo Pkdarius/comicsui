@@ -1,0 +1,24 @@
+<li [ngClass]="isCollapsed ? 'show' : ''" class="nav-item dropdown">
+  <a (click)="toggleCollapse()" *ngIf="data.items" class="nav-link dropdown-toggle">
+    <i *ngIf="data.icon" class="material-icons icon">{{ data.icon }}</i>
+    <span>{{ data.title }}</span>
+    <i class="material-icons arrow">expand_more</i>
+    <span class="material-icons-outlined">
+manage_accounts
+</span>
+  </a>
+  <div
+    #collapse="ngbCollapse"
+    *ngIf="data.items"
+    [(ngbCollapse)]="!isCollapsed" class="flex-column"
+  >
+    <app-menu-item *ngFor="let item of data.items"
+                   [data]="item"
+    ></app-menu-item>
+  </div>
+  <div *ngIf="!data.items" class="nav-item">
+    <a class="nav-link" href="{{ data.href }}">
+      <span>{{ data.title }}</span>
+    </a>
+  </div>
+</li>

@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/*@import "";*/
+/*@import "assets/vendor/material-icons/material-icons.css";*/
+@import "assets/vendor/flags/css/flag-icon.min.css";
+@import "assets/css/style-darkblue-dark.css";
+@import "assets/css/gfonts.css";
