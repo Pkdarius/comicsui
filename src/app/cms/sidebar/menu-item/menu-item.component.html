@@ -1,11 +1,8 @@
 <li [ngClass]="isCollapsed ? 'show' : ''" class="nav-item dropdown">
   <a (click)="toggleCollapse()" *ngIf="data.items" class="nav-link dropdown-toggle">
-    <i *ngIf="data.icon" class="material-icons icon">{{ data.icon }}</i>
+    <i *ngIf="data.icon" class="material-icons-outlined">{{ data.icon }}</i>
     <span>{{ data.title }}</span>
     <i class="material-icons arrow">expand_more</i>
-    <span class="material-icons-outlined">
-manage_accounts
-</span>
   </a>
   <div
     #collapse="ngbCollapse"
