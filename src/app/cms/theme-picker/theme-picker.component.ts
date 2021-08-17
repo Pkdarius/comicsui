@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStorageService} from "../service/local-storage.service";
 
 @Component({
   selector: 'app-theme-picker',
@@ -6,10 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theme-picker.component.css']
 })
 export class ThemePickerComponent implements OnInit {
-
-  constructor() { }
+  wrapperCorner: boolean = false;
+  constructor(private localStorage: LocalStorageService) {
+  }
 
   ngOnInit(): void {
+    this.loadTheme();
+  }
+
+  loadTheme() {
+    const body = document.querySelector('body') as HTMLElement;
+    if (this.localStorage.get('wrappercorner')) {
+      this.wrapperCorner = true;
+      body.classList.add('wrappercorner');
+    } else {
+      this.wrapperCorner = false;
+      body.classList.remove('wrappercorner');
+    }
+
+
+    const mainContainer = document.querySelector('#main-container') as HTMLElement;
+    if (this.localStorage.get('contentWidth')) {
+      this.wrapperCorner = true;
+      mainContainer.classList.add('contentWidth');
+    } else {
+      this.wrapperCorner = false;
+      mainContainer.classList.remove('contentWidth');
+    }
   }
 
   changeTheme() {
@@ -17,13 +41,10 @@ export class ThemePickerComponent implements OnInit {
     if (body.classList.contains('sidebar-compact')) {
       document.querySelectorAll('.sidebar .dropdown').forEach(dropDown => {
         dropDown.classList.remove('show');
-        dropDown.querySelectorAll('dropdown-toggle').forEach(dropDownToggle => {
-          // dropDownToggle.nextElementSibling.
-        })
-      })
-    }
-    if ($('body').hasClass('sidebar-compact') == true) {
-      $('.sidebar').find('.dropdown').removeClass('show').find('.dropdown-toggle').next().hide();
+        dropDown.querySelectorAll('.dropdown-toggle').forEach(dropDownToggle => {
+          dropDownToggle.nextElementSibling?.classList.add('d-none');
+        });
+      });
     }
   }
 
