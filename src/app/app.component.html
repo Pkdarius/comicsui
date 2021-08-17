@@ -1,2 +1,17 @@
 <app-loader></app-loader>
 <app-sidebar></app-sidebar>
+<div class="wrapper" (click)="hideSideMenu($event)">
+  <div class="content shadow-sm">
+    <div class="container-fluid header-container">
+      <div class="row header">
+        <app-header></app-header>
+      </div>
+    </div>
+    <div class="container main-container" id="main-container">
+      <app-main-container></app-main-container>
+    </div>
+  </div>
+      <app-footer></app-footer>
+</div>
+<app-chat-box></app-chat-box>
+<app-theme-picker></app-theme-picker>

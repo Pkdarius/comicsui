@@ -1,0 +1,24 @@
+<div class="container-fluid " id="header-container">
+  <div class="row">
+    <!-- Header starts -->
+    <nav class="navbar col-12 navbar-expand ">
+      <button class="menu-btn btn btn-link btn-sm" (click)="toggleSideMenu($event)">
+        <i class="material-icons">menu</i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <app-search-form></app-search-form>
+
+        <!-- icons dropwdowns starts -->
+        <ul class="navbar-nav ml-auto">
+
+          <!-- applicatio quicklinks dropdown-->
+          <li class="nav-item dropdown d-none d-sm-flex">
+            <app-navbar-item></app-navbar-item>
+          </li>
+        </ul>
+        <!-- icons dropwdowns starts -->
+      </div>
+    </nav>
+    <!-- Header ends -->
+  </div>
+</div>
